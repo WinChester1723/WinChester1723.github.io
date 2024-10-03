@@ -1,0 +1,408 @@
+// Цветовые переменные
+$primary-color: rgb(29, 60, 197);
+$secondary-color: #0056b3;
+$background-color: #f8f9fa;
+$text-color: #333;
+$header-bg-color: rgb(52, 58, 64);
+$light-grey: rgb(99, 131, 186);
+$link-hover-color: rgb(29, 78, 216);
+
+// Миксин для плавных переходов
+@mixin transition($property, $time) {
+  transition: $property $time ease-in-out;
+}
+
+// Основные стили
+body {
+  font-family: 'New Century Schoolbook', 'TeX Gyre Schola', serif;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  color: $text-color;
+  background-image: url('../fonts/image1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  // Добавляем размытие для фона
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; // Используем то же фоновое изображение
+    background-size: inherit;
+    background-position: inherit;
+    background-attachment: inherit;
+    filter: blur(115px); // Размытие фона
+    z-index: -1; // Размытие позади контента
+  }
+}
+
+// Стили для заголовков и навигации
+.header {
+  background-color: $header-bg-color;
+  padding: 20px;
+  color: rgb(253, 247, 247);
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+
+      li {
+        a {
+          color: rgb(251, 248, 248);
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 2rcap;
+          padding: 5px 10px;
+          @include transition(all, 0.3s);
+
+          &:hover {
+            background-color: darken($header-bg-color, 5%);
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Контент и фоновый блок
+.content {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(200, 205, 214, 0.85); // Фон для контента
+  border-radius: 10px;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+// Заголовки
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #212529;
+
+  @media (max-width: 768px) {
+    font-size: 2em;
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #212529;
+
+  @media (max-width: 768px) {
+    font-size: 1.3em;
+  }
+}
+
+// Стили для текста
+p {
+  font-size: 1.3em;
+  line-height: 1.6;
+  color: $light-grey;
+}
+
+a {
+  color: $primary-color;
+  @include transition(color, 0.3s);
+
+  &:hover {
+    text-decoration: underline;
+    color: $secondary-color;
+  }
+}
+
+// Контейнер проектов
+.projects-container {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+// Стили для карточек проектов
+.project-item {
+  background-color: rgb(175, 181, 202);
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  @include transition(all, 0.3s);
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  h3 {
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $text-color;
+  }
+
+  a {
+    color: $primary-color;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+      color: $secondary-color;
+    }
+  }
+}
+
+// Контактная форма
+.contact-form {
+  input, textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    @include transition(background-color, 0.3s);
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+// Анимация появления
+[data-aos] {
+  opacity: 0;
+  @include transition(opacity, 0.5s);
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+// Улучшенные стили для контактной секции
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: rgba(199, 199, 214, 0.85); // Слегка прозрачный фон для секции
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Легкая тень
+
+  .contact-form, .contact-info {
+    flex: 1;
+    padding: 20px;
+    margin: 0 10px;
+  }
+
+  // Заголовки
+  h1, h2 {
+    color: $primary-color;
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+  }
+
+  // Форма
+  .contact-form {
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 1.1em;
+        color: $text-color;
+        margin-bottom: 5px;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid $light-grey;
+        font-size: 1em;
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+
+      button {
+        padding: 12px;
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2em;
+        cursor: pointer;
+        @include transition(background-color, 0.3s);
+
+        &:hover {
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  // Информация о контактах
+  .contact-info {
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1em;
+
+      li {
+        margin-bottom: 15px;
+        color: $text-color;
+        position: relative;
+
+        &:before {
+          content: '•'; // Круглый маркер для списка
+          color: $primary-color;
+          font-size: 1.5em;
+          position: absolute;
+          left: -25px;
+          top: 0;
+        }
+
+        a {
+          color: $primary-color;
+          text-decoration: none;
+          font-weight: bold;
+          @include transition(color, 0.3s);
+
+          &:hover {
+            color: $link-hover-color;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Футер сайта
+.footer {
+  background-color: $header-bg-color;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+// Исправлено: Прямоугольная рамка для изображения профиля
+.about-container .profile-image {
+  border-radius: 10px; // Слегка закругленные углы
+  width: 180px; // Увеличение размера изображения
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Тень для изображения
+}
+
+// Улучшения для секции "Обо мне"
+.about-container {
+  background-color: rgba(117, 125, 136, 0.95); // Фон
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 35px auto;
+  max-width: 900px;
+  text-align: center;
+
+  .title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: rgb(16, 31, 101); // Цвет заголовка
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .subtitle {
+    font-size: 1.7em;
+    margin-top: 30px;
+    color: rgb(28, 61, 94); // Цвет подзаголовков
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .about-text, .experience-text, .skills-text {
+    font-size: 1.3rem;
+    color: rgb(36, 36, 49); // Цвет текста
+    line-height: 1.7; // Лучшая читабельность текста
+    margin-bottom: 20px;
+  }
+
+  .skills-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.5rem;
+
+    li {
+      font-size: 1.1rem;
+      color: #09163d; // Цвет текста для списка навыков
+      margin-bottom: 10px;
+      padding-left: 0;
+      position: relative;
+
+      &:before {
+        content: '•'; // Символ для списка
+        position: absolute;
+        left: 0;
+        color: rgb(13, 19, 46); // Цвет символа списка
+        font-size: 1.5rem;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// Секции сертификатов
+.certificates-container ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 20px;
+    a {
+      color: rgb(39, 41, 111); // Цвет ссылки
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    p {
+      color: rgb(43, 44, 46); // Цвет описания сертификатов
+      font-size: 1.2rem;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
