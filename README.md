@@ -1,6 +1,6 @@
 # Portfolio of Pasha Pashazade
 
-Welcome to my portfolio project! You can view the live version of my portfolio [here](https://WinChester1723.github.io/).
+Welcome to my portfolio project! You can view the live version of my portfolio [here](https://winchester1723.github.io/).
 
 ## About Me
 I am a dynamic and results-driven software engineer with a specialization in backend development using technologies such as .NET, Azure, and more. My expertise includes CI/CD, automation, and cloud-based solutions.
