@@ -125,23 +125,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const terminalBody = document.getElementById('terminal-body');
 
     const pipelineSteps = [
-        { text: 'Initializing Azure DevOps Agent (Hosted Ubuntu-Latest)...', type: 'info', delay: 400 },
-        { text: 'Checking out repository: github.com/WinChester1723/My_ResuMe_IO', type: 'info', delay: 600 },
-        { text: 'Commit SHA: e2f8b50 (Update portfolio content and styling)', type: 'default', delay: 400 },
-        { text: 'Setting up .NET SDK v8.0.204...', type: 'info', delay: 500 },
-        { text: 'Restoring NuGet packages...', type: 'default', delay: 700 },
-        { text: 'Building solution My_ResuMe_IO.sln...', type: 'info', delay: 900 },
-        { text: '  -> Microsoft (R) Build Engine version 17.9.8', type: 'default', delay: 200 },
-        { text: '  -> Build succeeded: 0 Warning(s), 0 Error(s)', type: 'success', delay: 500 },
-        { text: 'Executing unit tests (Microsoft.TestHost)...', type: 'info', delay: 800 },
-        { text: '  -> Total tests: 42, Passed: 42, Failed: 0', type: 'success', delay: 400 },
-        { text: 'Packaging application: Building Docker container...', type: 'info', delay: 700 },
-        { text: '  -> Pushing image to registry: acrnovum.azurecr.io/resume:latest', type: 'default', delay: 600 },
-        { text: 'Deploying manifests to Azure Kubernetes Service (AKS)...', type: 'info', delay: 800 },
-        { text: '  -> Cluster namespace: production-k8s', type: 'default', delay: 300 },
-        { text: '  -> Releasing pods: my-resume-deployment (3 replicas)...', type: 'default', delay: 500 },
-        { text: 'Verifying health probes: http://winchester1723.github.io...', type: 'info', delay: 600 },
-        { text: 'Deployment Succeeded! Pasha\'s site is online and 100% stable. 🚀', type: 'success', delay: 300 }
+        { text: 'Initializing Azure DevOps build agent...', type: 'info', delay: 400 },
+        { text: 'Checking out source (Git / TFVC)...', type: 'info', delay: 500 },
+        { text: 'Restoring NuGet packages: F&O compiler tools, platform and application...', type: 'default', delay: 700 },
+        { text: 'Compiling X++ models...', type: 'info', delay: 900 },
+        { text: '  -> Build succeeded: 0 errors', type: 'success', delay: 400 },
+        { text: 'Running Best Practice checks...', type: 'info', delay: 700 },
+        { text: '  -> 0 BP errors', type: 'success', delay: 300 },
+        { text: 'Running X++ unit tests (SysTest)...', type: 'info', delay: 700 },
+        { text: '  -> All tests passed', type: 'success', delay: 300 },
+        { text: 'Creating deployable package...', type: 'info', delay: 700 },
+        { text: 'Publishing build artifact...', type: 'default', delay: 500 },
+        { text: 'Uploading package to LCS Asset Library...', type: 'info', delay: 700 },
+        { text: 'Applying package to Sandbox (UAT)...', type: 'info', delay: 900 },
+        { text: '  -> Database synchronization completed', type: 'default', delay: 400 },
+        { text: 'Deployment succeeded — ready for UAT sign-off. (demo)', type: 'success', delay: 300 }
     ];
 
     if (runPipelineBtn && terminalBody) {

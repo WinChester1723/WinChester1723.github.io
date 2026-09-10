@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasha Pashazade | Senior Software Engineer</title>
-    <meta name="description" content="Portfolio of Pasha Pashazade - Senior Software Engineer specializing in C# / .NET, Dynamics 365 F&O, Azure & DevOps infrastructure.">
+    <title>Pasha Pashazade | Senior Software Engineer — Dynamics 365 F&amp;O, C#/.NET</title>
+    <meta name="description" content="Pasha Pashazade — Senior Software Engineer: Microsoft Dynamics 365 Finance and Operations (X++), C#/.NET, integrations and Azure DevOps. MB-700, AZ-400. Open to relocation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://winchester1723.github.io/">
+    <meta property="og:title" content="Pasha Pashazade — Senior Software Engineer">
+    <meta property="og:description" content="Dynamics 365 F&amp;O (X++) · C#/.NET · integrations · Azure DevOps. MB-700, AZ-400. Open to relocation.">
+    <meta property="og:image" content="https://winchester1723.github.io/profile_avatar.png">
+    <meta name="twitter:card" content="summary">
     <!-- Google Fonts: Outfit (modern sans-serif) & Fira Code (monospace for code elements) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@1.44.0/dist/umd/lucide.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,6 +33,7 @@
             </a>
             <nav class="nav-menu">
                 <a href="#about" class="nav-link">About</a>
+                <a href="#work" class="nav-link">Work</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -49,6 +56,7 @@
     <div class="mobile-drawer">
         <nav class="drawer-menu">
             <a href="#about" class="drawer-link">About</a>
+            <a href="#work" class="drawer-link">Work</a>
             <a href="#skills" class="drawer-link">Skills</a>
             <a href="#experience" class="drawer-link">Experience</a>
             <a href="#contact" class="drawer-link">Contact</a>
@@ -67,23 +75,23 @@
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
             <div class="hero-content">
-                <div class="badge-accent fade-in">Available for worldwide opportunities</div>
+                <div class="badge-accent fade-in">Open to relocation · Remote / B2B</div>
                 <h1 class="hero-title fade-in">
                     Pasha Pashazade
                 </h1>
                 <p class="hero-subtitle fade-in">
-                    Senior Software Engineer <span class="highlight">|</span> Cloud & DevOps Specialist
+                    Senior Software Engineer <span class="highlight">|</span> Dynamics 365 F&amp;O · C#/.NET · Azure
                 </p>
                 <p class="hero-tagline fade-in">
-                    I bridge the gap between robust enterprise applications and scalable cloud architecture. Specializing in C#/.NET, Dynamics 365 Finance & Operations, and automated Azure cloud infrastructure.
+                    I build enterprise solutions on Microsoft Dynamics 365 Finance and Operations and the wider Microsoft stack — ERP extensions, integrations with banks and external systems, reporting and CI/CD — and take them from requirements to production.
                 </p>
                 <div class="hero-cta-group fade-in">
-                    <a href="#contact" class="btn btn-primary">
-                        <span>Get in Touch</span>
-                        <i data-lucide="arrow-up-right"></i>
+                    <a href="cv/Pasha_Pashazade_CV_D365FO.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+                        <span>Download CV</span>
+                        <i data-lucide="download"></i>
                     </a>
-                    <a href="#experience" class="btn btn-secondary">
-                        <span>View Work Experience</span>
+                    <a href="#work" class="btn btn-secondary">
+                        <span>View Selected Work</span>
                     </a>
                 </div>
             </div>
@@ -104,10 +112,10 @@
                     <div class="card-icon"><i data-lucide="user"></i></div>
                     <h3>Who I Am</h3>
                     <p>
-                        I am a software engineer with <strong>3+ years of experience</strong> in enterprise software engineering and cloud ecosystems. I specialize in building highly available backend services, developing specialized modules for <strong>Dynamics 365 Finance & Operations (X++)</strong>, and automating deployments using modern cloud-native architectures.
+                        I'm a Senior Software Engineer with <strong>3+ years</strong> building enterprise solutions on <strong>Microsoft Dynamics 365 Finance and Operations (X++)</strong> and the Microsoft stack — C#/.NET, SQL Server and Azure. My work covers ERP extensions, integrations with banks and external systems, SSRS reporting, production support and CI/CD.
                     </p>
                     <p>
-                        With a solid foundation in engineering and problem solving, I thrive in international, fast-paced teams where code quality, automation, and stability are valued.
+                        D365 is my strongest ground, but I'm not tied to one platform: I moved from Java to X++, write C# and Python services and bots, and pick up new tools when a project needs them. I work in an international team and care about clean, production-ready code.
                     </p>
                 </div>
 
@@ -116,7 +124,7 @@
                     <div class="card-header-flex">
                         <div class="title-with-icon">
                             <div class="card-icon cyan-icon"><i data-lucide="terminal"></i></div>
-                            <h3>DevOps Pipeline Simulator</h3>
+                            <h3>D365 F&amp;O Build Pipeline</h3>
                         </div>
                         <button id="run-pipeline-btn" class="pipeline-btn">
                             <i data-lucide="play" class="play-icon"></i> Run Pipeline
@@ -130,7 +138,7 @@
                             <span class="terminal-title">azure-pipelines.yml</span>
                         </div>
                         <div id="terminal-body" class="terminal-body">
-                            <div class="terminal-line placeholder-line">Click "Run Pipeline" to simulate an automated deployment to Azure Kubernetes Service...</div>
+                            <div class="terminal-line placeholder-line">Click "Run Pipeline" to simulate a Dynamics 365 F&amp;O build and deployment (demo)...</div>
                         </div>
                     </div>
                 </div>
@@ -140,13 +148,6 @@
                     <div class="card-icon gold-icon"><i data-lucide="award"></i></div>
                     <h3>Microsoft Certifications</h3>
                     <div class="certs-list">
-                        <div class="cert-item" data-cert="AZ-400">
-                            <div class="cert-badge devops">Expert</div>
-                            <div class="cert-info">
-                                <span class="cert-name">DevOps Engineer Expert</span>
-                                <span class="cert-code">AZ-400</span>
-                            </div>
-                        </div>
                         <div class="cert-item" data-cert="MB-700">
                             <div class="cert-badge architect">Expert</div>
                             <div class="cert-info">
@@ -154,18 +155,25 @@
                                 <span class="cert-code">MB-700</span>
                             </div>
                         </div>
-                        <div class="cert-item" data-cert="AZ-204">
-                            <div class="cert-badge associate">Associate</div>
-                            <div class="cert-info">
-                                <span class="cert-name">Azure Developer Associate</span>
-                                <span class="cert-code">AZ-204</span>
-                            </div>
-                        </div>
                         <div class="cert-item" data-cert="MB-500">
                             <div class="cert-badge associate">Associate</div>
                             <div class="cert-info">
                                 <span class="cert-name">D365 F&O Developer Associate</span>
                                 <span class="cert-code">MB-500</span>
+                            </div>
+                        </div>
+                        <div class="cert-item" data-cert="AZ-400">
+                            <div class="cert-badge devops">Expert</div>
+                            <div class="cert-info">
+                                <span class="cert-name">DevOps Engineer Expert</span>
+                                <span class="cert-code">AZ-400</span>
+                            </div>
+                        </div>
+                        <div class="cert-item" data-cert="AZ-204">
+                            <div class="cert-badge associate">Associate</div>
+                            <div class="cert-info">
+                                <span class="cert-name">Azure Developer Associate</span>
+                                <span class="cert-code">AZ-204</span>
                             </div>
                         </div>
                         <div class="cert-item" data-cert="AZ-900">
@@ -176,22 +184,101 @@
                             </div>
                         </div>
                     </div>
+                    <a class="cert-verify" href="https://learn.microsoft.com/en-us/users/pashapashazade-3587/credentials/certifications?tab=credentials-tab" target="_blank" rel="noopener">All active — verify on Microsoft Learn <i data-lucide="external-link"></i></a>
                 </div>
 
                 <!-- Card 4: Quick Stats -->
                 <div class="bento-card card-stats">
                     <div class="stat-box">
                         <span class="stat-number">3+</span>
-                        <span class="stat-label">Years Experience</span>
+                        <span class="stat-label">Years in D365 F&amp;O</span>
                     </div>
                     <div class="stat-box">
                         <span class="stat-number">5</span>
                         <span class="stat-label">Microsoft Certifications</span>
                     </div>
                     <div class="stat-box">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">CI/CD Automation</span>
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Expert-level (MB-700, AZ-400)</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Work Section -->
+        <section id="work" class="skills-section work-section">
+            <h2 class="section-title">Selected Work</h2>
+            <p class="work-note">Delivered at Novum LLC for enterprise clients. Client names are omitted.</p>
+            <div class="skills-grid work-grid">
+                <div class="skills-category-card work-card">
+                    <div class="skills-header">
+                        <i data-lucide="landmark"></i>
+                        <h3>Bank Payment Integration</h3>
+                    </div>
+                    <p class="work-desc">Vendor payment integration between D365 F&amp;O and a commercial bank: XML payment documents, customs declaration data from a state service and a parallel attachment service (5 concurrent uploads, 90+ documents per batch). Delivered through UAT to production.</p>
+                    <ul class="skills-list"><li>X++</li><li>Chain of Command</li><li>REST API</li><li>XML</li><li>Workflow</li></ul>
+                </div>
+                <div class="skills-category-card work-card">
+                    <div class="skills-header">
+                        <i data-lucide="layers"></i>
+                        <h3>Bulk Settlement Engine</h3>
+                    </div>
+                    <p class="work-desc">Multi-company settle / undo engine for customer and vendor transactions with three entry points: the F&amp;O UI, Excel Online and an OData API used by an external 1C accounting system. Batch processing handles requests of up to 7,000 lines.</p>
+                    <ul class="skills-list"><li>X++</li><li>OData</li><li>Data Entities</li><li>SysOperation / Batch</li></ul>
+                </div>
+                <div class="skills-category-card work-card">
+                    <div class="skills-header">
+                        <i data-lucide="file-text"></i>
+                        <h3>HR Orders Platform</h3>
+                    </div>
+                    <p class="work-desc">Order generation, consolidation and a 9-step approval workflow for two airlines, with SSRS output for 63 order types under national labor law.</p>
+                    <ul class="skills-list"><li>X++</li><li>Workflow</li><li>SSRS</li><li>Security</li></ul>
+                </div>
+                <div class="skills-category-card work-card">
+                    <div class="skills-header">
+                        <i data-lucide="receipt"></i>
+                        <h3>Finance &amp; Procurement</h3>
+                    </div>
+                    <p class="work-desc">Multi-currency three-way matching across legal entities, invoice prints with payment-currency totals, purchase agreements, fixed assets and inventory journals.</p>
+                    <ul class="skills-list"><li>Chain of Command</li><li>SSRS</li><li>Finance</li><li>Procurement</li></ul>
+                </div>
+                <div class="skills-category-card work-card">
+                    <div class="skills-header">
+                        <i data-lucide="shield-check"></i>
+                        <h3>Production Support &amp; Delivery</h3>
+                    </div>
+                    <p class="work-desc">Diagnosing and fixing defects in bank, sales-posting and journal customizations, writing runbooks, coordinating production data fixes with Microsoft Support; Azure DevOps pipelines and LCS deployments.</p>
+                    <ul class="skills-list"><li>Azure DevOps</li><li>LCS</li><li>SQL Server</li><li>TFVC / Git</li></ul>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Side Projects</h3>
+            <div class="skills-grid work-grid">
+                <div class="skills-category-card work-card">
+                    <div class="skills-header">
+                        <i data-lucide="bot"></i>
+                        <h3>AlphaScout</h3>
+                    </div>
+                    <p class="work-desc">Telegram bot that scans prediction markets and scores trading signals with LLMs. Multi-provider LLM gateway with fallback, per-user settings; runs in Docker on a VPS in paper-trading mode.</p>
+                    <p class="work-meta">Private repository</p>
+                    <ul class="skills-list"><li>Python</li><li>Docker</li><li>SQLite</li><li>APScheduler</li></ul>
+                </div>
+                <div class="skills-category-card work-card">
+                    <div class="skills-header">
+                        <i data-lucide="shopping-cart"></i>
+                        <h3>Ekatalog</h3>
+                    </div>
+                    <p class="work-desc">Price aggregator for Azerbaijan, in development: TypeScript monorepo with background scraping jobs and search.</p>
+                    <p class="work-meta">In development</p>
+                    <ul class="skills-list"><li>Next.js</li><li>tRPC</li><li>Prisma</li><li>BullMQ</li><li>Elasticsearch</li></ul>
+                </div>
+                <div class="skills-category-card work-card">
+                    <div class="skills-header">
+                        <i data-lucide="folder-git-2"></i>
+                        <h3>.NET Demos</h3>
+                    </div>
+                    <p class="work-desc">Small public repos exploring integration patterns: <a href="https://github.com/WinChester1723/integration-service" target="_blank" rel="noopener">integration service</a>, <a href="https://github.com/WinChester1723/OcelotDemo" target="_blank" rel="noopener">Ocelot API gateway</a>, <a href="https://github.com/WinChester1723/service-bus-demo" target="_blank" rel="noopener">Azure Service Bus</a>, <a href="https://github.com/WinChester1723/demoBookStoreSOAP" target="_blank" rel="noopener">SOAP service</a>.</p>
+                    <ul class="skills-list"><li>C#</li><li>.NET</li><li>Ocelot</li><li>Service Bus</li></ul>
                 </div>
             </div>
         </section>
@@ -202,48 +289,50 @@
             <div class="skills-grid">
                 <div class="skills-category-card">
                     <div class="skills-header">
+                        <i data-lucide="database"></i>
+                        <h3>Dynamics 365 F&amp;O</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>X++</li>
+                        <li>Chain of Command</li>
+                        <li>Data Entities</li>
+                        <li>OData / Custom Services</li>
+                        <li>Business Events</li>
+                        <li>SSRS</li>
+                        <li>DMF</li>
+                        <li>SysOperation / Batch</li>
+                        <li>Workflow &amp; Security</li>
+                        <li>LCS</li>
+                    </ul>
+                </div>
+                <div class="skills-category-card">
+                    <div class="skills-header">
                         <i data-lucide="code-2"></i>
-                        <h3>Development & Platforms</h3>
+                        <h3>Backend &amp; Integration</h3>
                     </div>
                     <ul class="skills-list">
                         <li>C#</li>
-                        <li>.NET Core</li>
-                        <li>Dynamics 365 F&O (X++)</li>
+                        <li>.NET</li>
+                        <li>ASP.NET</li>
+                        <li>SQL Server / T-SQL</li>
+                        <li>REST &amp; OData APIs</li>
+                        <li>OAuth 2.0</li>
+                        <li>XML / JSON</li>
+                        <li>API Gateways (Ocelot)</li>
                         <li>Python</li>
-                        <li>Spring Boot (Java)</li>
-                        <li>REST APIs</li>
-                        <li>Git</li>
-                        <li>Maven</li>
                     </ul>
                 </div>
                 <div class="skills-category-card">
                     <div class="skills-header">
                         <i data-lucide="cloud"></i>
-                        <h3>Cloud & Infrastructure</h3>
+                        <h3>DevOps &amp; Cloud</h3>
                     </div>
                     <ul class="skills-list">
-                        <li>Azure Cloud Services</li>
-                        <li>Azure DevOps</li>
-                        <li>CI/CD Pipelines (YAML)</li>
+                        <li>Azure DevOps (YAML)</li>
+                        <li>Git / TFVC</li>
                         <li>Docker</li>
-                        <li>Kubernetes (Manifests)</li>
-                        <li>AKS (Azure Kubernetes Service)</li>
-                        <li>Azure App Services</li>
-                        <li>Linux Containers</li>
-                    </ul>
-                </div>
-                <div class="skills-category-card">
-                    <div class="skills-header">
-                        <i data-lucide="git-branch"></i>
-                        <h3>Methodologies & Practices</h3>
-                    </div>
-                    <ul class="skills-list">
-                        <li>Infrastructure as Code (IaC)</li>
-                        <li>Automated Testing & Integration</li>
-                        <li>Enterprise App Architecture</li>
-                        <li>System Performance Monitoring</li>
-                        <li>Agile & Scrum Processes</li>
-                        <li>International Collaboration</li>
+                        <li>Kubernetes (AKS)</li>
+                        <li>Azure</li>
                     </ul>
                 </div>
             </div>
@@ -262,14 +351,14 @@
                         <span class="timeline-company">Novum LLC (Baku, Azerbaijan)</span>
                     </div>
                     <div class="timeline-content">
-                        <p class="timeline-intro">Focusing on enterprise software development, cloud platform operations, and automated delivery processes within an international team.</p>
+                        <p class="timeline-intro">Dynamics 365 Finance and Operations development for enterprise clients in an international team.</p>
                         <ul class="timeline-bullets">
-                            <li>Develop and operate cloud-ready .NET microservices with integrated CI/CD pipelines and automated deployments.</li>
-                            <li>Design and maintain complex Azure DevOps pipelines using optimized YAML configurations.</li>
-                            <li>Deploy containerized applications to Azure App Services and Azure Kubernetes Service (AKS), maintaining stability and scaling policies.</li>
-                            <li>Lead development for Dynamics 365 Finance & Operations custom module extensions using X++ and C#, streamlining operations on large-scale databases.</li>
-                            <li>Improve overall system and delivery stability by integrating automated test suites and infrastructure monitoring practices.</li>
-                            <li>Collaborate closely with global developers, architects, and stakeholders to translate business requirements into technical solutions.</li>
+                            <li>Built a vendor payment integration between D365 F&amp;O and a commercial bank: XML payment documents, customs declaration data and a parallel attachment service; taken through UAT to production.</li>
+                            <li>Delivered a multi-company bulk settlement engine with three entry points — F&amp;O UI, Excel Online and an OData API used by an external 1C accounting system.</li>
+                            <li>Built an HR orders platform for two airlines: generation, a 9-step approval workflow and SSRS output for 63 order types.</li>
+                            <li>Delivered Finance and Procurement features with Chain of Command extensions and SSRS across multiple legal entities and currencies.</li>
+                            <li>Supported production: fixed defects in bank, sales-posting and journal customizations, wrote runbooks, coordinated data fixes with Microsoft Support.</li>
+                            <li>Own the path to production: Azure DevOps pipelines, Git/TFVC, LCS deployments, Docker/AKS for .NET services.</li>
                         </ul>
                     </div>
                 </div>
@@ -285,9 +374,8 @@
                     <div class="timeline-content">
                         <p class="timeline-intro">Completed an intensive programming program focused on modern backend development.</p>
                         <ul class="timeline-bullets">
-                            <li>Built multiple Spring Boot enterprise-pattern projects, integrating relational databases (SQL) and custom ORMs.</li>
-                            <li>Developed, documented, and tested clean RESTful APIs utilizing Maven for build and dependency management.</li>
-                            <li>Gained hands-on practical experience with team collaboration, branching strategies in Git, and Agile methodologies.</li>
+                            <li>Built Spring Boot applications with PostgreSQL and REST APIs.</li>
+                            <li>Worked with Git-based team workflows, Maven builds and Agile practices.</li>
                         </ul>
                     </div>
                 </div>
@@ -300,9 +388,6 @@
                         <h3 class="timeline-role">Bachelor of Electrical, Radio and Telecommunications Engineering</h3>
                         <span class="timeline-company">Azerbaijan Higher Military Aircraft School</span>
                     </div>
-                    <div class="timeline-content">
-                        <p class="timeline-intro">Rigorous engineering program combining telecommunications, electrical engineering systems, aircraft communication infrastructure, and disciplined operational methodologies.</p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -311,8 +396,8 @@
         <section id="contact" class="contact-section">
             <div class="contact-card">
                 <div class="contact-info-panel">
-                    <h2 class="contact-title">Let's build something together</h2>
-                    <p class="contact-subtitle">I'm always open to discussing new projects, design systems, cloud migrations, or consulting on enterprise Azure & .NET architectures.</p>
+                    <h2 class="contact-title">Let's talk</h2>
+                    <p class="contact-subtitle">Open to Dynamics 365 F&amp;O and .NET roles — relocation (Serbia, EU, GCC) or remote / B2B. Email is the fastest way to reach me.</p>
                     
                     <div class="contact-details">
                         <div class="contact-detail-item">
@@ -337,32 +422,28 @@
                             <i data-lucide="map-pin"></i>
                             <div>
                                 <span class="label">Location</span>
-                                <span class="val">Baku, Azerbaijan (GMT+4)</span>
+                                <span class="val">Baku, Azerbaijan (GMT+4) · open to relocation</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contact Form -->
-                <div class="contact-form-panel">
-                    <form id="contact-form" action="https://formspree.io/f/placeholder" method="POST">
-                        <div class="form-group">
-                            <label for="form-name">Name</label>
-                            <input type="text" id="form-name" name="name" required placeholder="John Doe">
-                        </div>
-                        <div class="form-group">
-                            <label for="form-email">Email Address</label>
-                            <input type="email" id="form-email" name="email" required placeholder="john@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="form-message">Message</label>
-                            <textarea id="form-message" name="message" rows="5" required placeholder="Hi Pasha, I would like to discuss a project..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary submit-btn">
-                            <span>Send Message</span>
-                            <i data-lucide="send"></i>
-                        </button>
-                    </form>
+                <!-- CV Downloads -->
+                <div class="contact-form-panel cv-panel">
+                    <h3 class="cv-panel-title">Download CV</h3>
+                    <p class="cv-panel-sub">Two versions — same facts, different focus.</p>
+                    <a href="cv/Pasha_Pashazade_CV_D365FO.pdf" target="_blank" rel="noopener" class="btn btn-primary cv-btn">
+                        <i data-lucide="download"></i>
+                        <span>CV — Dynamics 365 F&amp;O</span>
+                    </a>
+                    <a href="cv/Pasha_Pashazade_CV_NET.pdf" target="_blank" rel="noopener" class="btn btn-secondary cv-btn">
+                        <i data-lucide="download"></i>
+                        <span>CV — .NET / Integration</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pasha-pashazade-b81875146" target="_blank" rel="noopener" class="btn btn-secondary cv-btn">
+                        <i data-lucide="briefcase"></i>
+                        <span>LinkedIn profile</span>
+                    </a>
                 </div>
             </div>
         </section>

@@ -1,44 +1,27 @@
 # Personal Portfolio | Pasha Pashazade
 
-A modern, responsive, and highly interactive static portfolio website showcasing my professional background, skills, and certifications as a **Senior Software Engineer** specializing in C#/.NET backend systems, Dynamics 365 F&O, Azure Cloud, and automated CI/CD infrastructure.
+Static portfolio site of **Pasha Pashazade** — Senior Software Engineer focused on **Microsoft Dynamics 365 Finance and Operations (X++)**, C#/.NET integrations and Azure DevOps.
 
-**Live Site:** [winchester1723.github.io](https://winchester1723.github.io/)
+**Live site:** [winchester1723.github.io](https://winchester1723.github.io/)
 
----
+## Sections
 
-## Key Features
+* **Overview** — short bio, a demo D365 F&O build pipeline (simulated terminal), Microsoft certifications with a link to verify them on Microsoft Learn.
+* **Selected Work** — anonymized project summaries from enterprise D365 F&O work, plus side projects.
+* **Technical Expertise** — Dynamics 365 F&O, backend & integration, DevOps & cloud.
+* **Experience** and **Contact** — with downloadable CVs (`cv/`).
 
-* **Glassmorphic Bento Grid Layout:** A sleek, dark-themed modular interface showing my bio, core stats, tech stack, and certifications.
-* **Interactive DevOps Pipeline Simulator:** A custom terminal widget that runs a simulated build, test, and deployment flow of a .NET service to Azure Kubernetes Service (AKS).
-* **Microsoft Certifications Dashboard:** Styled visual badges with hover effects displaying expert and associate level certifications (AZ-400, MB-700, AZ-204, MB-500, AZ-900).
-* **Interactive Timelines & Contacts:** Fully responsive work experience track and a contact section featuring clipboard copy utility, CSS-styled focus states, and a custom toast notification feedback system.
-* **Modern Performance:** Built strictly with vanilla web standards for near-instant load speeds and a 100/100 Lighthouse performance rating.
+## Tech stack
 
-## Tech Stack
+Semantic HTML5, vanilla CSS (custom properties, grid/flexbox), vanilla JavaScript (IntersectionObserver reveals, terminal simulator, clipboard copy). Icons: [Lucide](https://lucide.dev/) (pinned version). Fonts: Outfit & Fira Code (Google Fonts).
 
-* **Structure & Markup:** Semantic HTML5
-* **Design & Styling:** Vanilla CSS3 (CSS Custom Properties, Grid/Flexbox layouts, backdrop-filters, custom keyframes, and ambient radial glow elements)
-* **Interactivity & Logic:** ES6+ JavaScript (Intersection Observer API for reveal animations, DOM manipulation for terminal typing simulator, clipboard API utilities)
-* **Assets & Fonts:** [Lucide Icons](https://lucide.dev/), [Outfit](https://fonts.google.com/specimen/Outfit) & [Fira Code](https://fonts.google.com/specimen/Fira+Code) via Google Fonts
+## Local preview
 
-## Local Development
+```bash
+python -m http.server 8080
+# open http://localhost:8080
+```
 
-To clone and run the portfolio locally:
+## Updating the CVs
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/winchester1723/winchester1723.github.io.git
-   ```
-2. Navigate into the project folder:
-   ```bash
-   cd winchester1723.github.io
-   ```
-3. Start a local HTTP server to preview the site:
-   ```bash
-   python -m http.server 8080
-   ```
-4. Open your browser and navigate to `http://localhost:8080`.
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
+Source lives outside this repo (LaTeX). Rebuild the PDFs, then replace `cv/Pasha_Pashazade_CV_D365FO.pdf` and `cv/Pasha_Pashazade_CV_NET.pdf`.
